@@ -18,6 +18,16 @@ export function Home(props) {
                 </TouchableOpacity>
             </View>
 
+            <View style={styles.view2}>
+                <TouchableOpacity onPress={() => { props.navigation.navigate("Diogo") }} style={styles.touchable}>
+                    <View>
+                        <Text style={styles.texto}>
+                            Ver un Diogo
+                        </Text>
+                    </View>
+                </TouchableOpacity>
+            </View>
+
 
         </View>
     );
