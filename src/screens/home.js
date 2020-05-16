@@ -1,22 +1,19 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-export function Home() {
+export function Home(props) {
     return (
 
         <View style={{ flex: 1 }}>
 
-            <View style={styles.container}>
-                <Text>papi!</Text>
-            </View>
+
 
             <View style={styles.view2}>
-                <Text style={{ color: 'white' }}>papi!</Text>
-                <TouchableOpacity style={styles.touchable}>
+                <TouchableOpacity onPress={() => { props.navigation.navigate("Ronald") }} style={styles.touchable}>
                     <View>
-                        <Text>
-                            hola
-          </Text>
+                        <Text style={styles.texto}>
+                            Ver un Ronald
+                        </Text>
                     </View>
                 </TouchableOpacity>
             </View>
@@ -38,17 +35,24 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'red',
+        backgroundColor: 'skyblue',
     },
 
     touchable: {
-        width: 50,
+        width: 150,
         height: 50,
         alignItems: 'center',
         justifyContent: 'center',
         borderWidth: 2,
-
+        borderColor: 'white',
+        borderTopLeftRadius: 25,
+        borderBottomEndRadius: 25,
+        backgroundColor: '#4C939E'
     },
+    texto: {
+        fontSize: 20,
+        color: 'white',
+    }
 });
 
-export default App;
+export default Home;
