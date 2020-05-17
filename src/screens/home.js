@@ -6,8 +6,6 @@ export function Home(props) {
 
         <View style={{ flex: 1 }}>
 
-
-
             <View style={styles.view2}>
                 <TouchableOpacity onPress={() => { props.navigation.navigate("Ronald") }} style={styles.touchable}>
                     <View>
@@ -19,10 +17,30 @@ export function Home(props) {
             </View>
 
             <View style={styles.view2}>
+                <TouchableOpacity onPress={() => { props.navigation.navigate("Soda") }} style={styles.touchable}>
+                    <View>
+                        <Text style={styles.texto}>
+                            Gaseosas
+                        </Text>
+                    </View>
+                </TouchableOpacity>
+            </View>
+
+            <View style={styles.view2}>
                 <TouchableOpacity onPress={() => { props.navigation.navigate("Diogo") }} style={styles.touchable}>
                     <View>
                         <Text style={styles.texto}>
                             Ver un Diogo
+                        </Text>
+                    </View>
+                </TouchableOpacity>
+            </View>
+
+            <View style={styles.view2}>
+                <TouchableOpacity onPress={() => { props.navigation.navigate("Arreglo") }} style={styles.touchable}>
+                    <View>
+                        <Text style={styles.texto}>
+                            arreglo
                         </Text>
                     </View>
                 </TouchableOpacity>
